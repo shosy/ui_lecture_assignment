@@ -5,7 +5,7 @@ https://www-ui.is.s.u-tokyo.ac.jp/~takeo/course/2020/ui/index.html
 
 
 # Assignment
-[Check the game with key inputs] (https://hironoriyh.github.io/)
+[Check the game with key inputs](https://hironoriyh.github.io/)
 
 ## 1. Implement your own UI
 As the lecture introduced assignment, we'd like you to implement basic UIs such as moving and rotating to manipulate 2D tree branches. The programming language we use here is  Javascript using p5js (Javascript version of Processing); however, it is up to you which language you use. 
