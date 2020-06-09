@@ -23,7 +23,7 @@ While you implement your code, you will become an expert of your UI. To validate
 
 # The Game
 
-![](branchconnect.gif | width = 300)
+![](branchconnect_small.gif)
 
 The game interface is composed of boundary, target points, and branches.
 Branches can be connected within a certain angle range and importantly one branch must be mirrored. The mirror rule came from the fabrication constraint of 3-axis CNC router. 
