@@ -57,11 +57,9 @@ function mouseReleased() {
     */
 }
 
-function checkCloseBranch() {
+function checkCloseBranch(minDist) {
     var closeBranch = false;
     var closeIndex = null;
-    var minDragDist = 20; // 
-    var minDist = minDragDist;
     var mouseVec = new createVector(mouseX, mouseY);
     for (var i = 0; i < brc.length; i++) {
         var vertices = brc[i].transformed_contour;
