@@ -7,11 +7,10 @@ function keyPressed() {
         else active_brc_index += 1; // add the index
         brc[active_brc_index].setMoveActive(); // select the branch by activating it
     }
-    if (keyCode === SHIFT) {
-        brc[active_brc_index].setMirror();
-    }
+    // if (keyCode === SHIFT) {
+    //     brc[active_brc_index].setMirror();
+    // }
 
-    // for manipulating, taking the current position and rotation angle of the selected branch
     var position = brc[active_brc_index].pos.copy();
     var angle = brc[active_brc_index].rot;
 
@@ -29,7 +28,6 @@ function keyPressed() {
         position.add(0, 10); // go down
     }
 
-    // updating the added values
     brc[active_brc_index].setPosition(position.x, position.y);
     brc[active_brc_index].setAngle(angle); // in radians
     score.updateScore();
@@ -47,10 +45,11 @@ function mouseDragged(event) {
 function mouseReleased() {
 }
 
-// use this function to detect the closest branch from the clicked position. e.g., var branch = checkCloseBranch(20)
-function checkCloseBranch(minDist) {
+function checkCloseBranch() {
     var closeBranch = false;
     var closeIndex = null;
+    var minDragDist = 20; // 
+    var minDist = minDragDist;
     for (var i = 0; i < brc.length; i++) {
         var vertices = brc[i].transformed_contour;
         for (var j = 0; j < vertices.length; j++) {

@@ -176,8 +176,10 @@ Branch.prototype.getTransformedSkeleton = function () {
 Branch.prototype.drawBranch = function () {
   
   push();
-  if(!this.mirror) drawPolyline(this.transformed_contour, 2, this.color);
-  else drawPolyline(this.transformed_contour, 4, this.color);
+  if(this.invalid) drawPolyline(this.transformed_contour, 4, this.color);
+  else {
+    drawPolyline(this.transformed_contour, 2, this.color);
+  }
 
   strokeWeight(2);
   stroke(255, 255, 0);

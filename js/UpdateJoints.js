@@ -199,11 +199,10 @@ UpdateJoints.prototype = {
       }
 
       // Instance 4) If the branches are both mirrored or both Non-mirrored, the joint is invalid.
-      if (brc[_index].mirror === brc[this.other_index[i]].mirror) {
-        // console.log("mirror");
-        this.addInvalid(_index, i, "need to be mirrored");
-        continue;
-      }
+      // if (brc[_index].mirror === brc[this.other_index[i]].mirror) {
+      //   this.addInvalid(_index, i, "need to be mirrored");
+      //   continue;
+      // }
 
       // Instance 5) If the intersection is happening outside the boundary, the joint is invalid.
       if (this.skeletonNearPnt[i].x <0 || this.skeletonNearPnt[i].x> width || this.skeletonNearPnt[i].y<0 || this.skeletonNearPnt[i].y>height) {

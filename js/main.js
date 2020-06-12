@@ -3,7 +3,6 @@
 var brc = [];
 var boundary;
 var score;
-var mouseVec;
 var active_brc_index;
 
 // preload branches BEFORE setup()
@@ -13,7 +12,6 @@ function preload() {
 
 function setup() {
   var canvas = createCanvas(500, 450);
-  mouseVec = new createVector(0, 0); 
   boundary = new Boundary(); // initialize the boundary including target points on the corners
   score = new Score(); // initialize the scoring system including joint evaluation 
   active_brc_index = 0;
@@ -23,7 +21,6 @@ function setup() {
 
 function draw() {
   background(250);
-  mouseVec.set(pmouseX, pmouseY);
   boundary.drawBoundary(); 
   boundary.drawActivePoints(4, color(255, 240, 0, 200));
   for (var i = 0; i < brc.length; i++){
