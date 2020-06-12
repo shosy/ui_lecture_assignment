@@ -7,9 +7,6 @@ function keyPressed() {
         else active_brc_index += 1; // add the index
         brc[active_brc_index].setMoveActive(); // select the branch by activating it
     }
-    // if (keyCode === SHIFT) {
-    //     brc[active_brc_index].setMirror();
-    // }
 
     var position = brc[active_brc_index].pos.copy();
     var angle = brc[active_brc_index].rot;
@@ -33,16 +30,31 @@ function keyPressed() {
     score.updateScore();
 }
 
+
 // selection of branches
 function mousePressed(event) {
+    /* first get clicked position by 
+    console.log(event.layerX + ' , ' + event.layerY); 
+    or 
+    console.log(mouseX + ' , ' + mouseY);
+    
+    and then select
+    var branch = checkCloseBranch(20)[0];
+    */
 }
 
 // move and rotate 
 function mouseDragged(event) {
+    /*
+    see keyPressed
+    */
 }
 
 // deactivate the selected branch
 function mouseReleased() {
+    /*
+    you might need to deselect the selected branch 
+    */
 }
 
 function checkCloseBranch() {
@@ -50,6 +62,7 @@ function checkCloseBranch() {
     var closeIndex = null;
     var minDragDist = 20; // 
     var minDist = minDragDist;
+    var mouseVec = new createVector(mouseX, mouseY);
     for (var i = 0; i < brc.length; i++) {
         var vertices = brc[i].transformed_contour;
         for (var j = 0; j < vertices.length; j++) {
