@@ -30,12 +30,37 @@ https://p5js.org/reference/#/p5/keyPressed
 
 Focusing on basic manipulations (move, rotate, and mirror), you can develop your own interaction. You can set your own goal of UI development, such as intuitive, smooth, or fun. As an intuitive UI example, [you can take mouse inputs.](https://github.com/hironoriyh/ui_lecture_assignment/blob/9f2d841e5770d647dd21f749755b51c29332cd30/js/Events.js#L38) By clicking, a user can select a branch and move/rotate by dragging. Mouse input is just an example. Please feel free to implement your own UI ideas that are highly appreciated!
 
+Once you finish your implementation, please make screen captha of you using your UI by Bandicam, Camstudio, and Screen2Gif etc. I personally recommend to make GIF file as you can place it easily.The video would be 30sec to max 1min. Also, please summarize your UI in the report as well by describing your UI design concept and how to use it. This part of the report can be written in README.md as well. 
  
 
 # Assignment 2. User study: Test your UI with participants
-While you implement your code, you will become an expert of your UI. To validate usability, you can test the UI with your friends and families. You can first let them use your UI without any instructions to see how intuitive your UI is, and then provide more information such as how to use your UI and the aim of the UI. Please measure the duration for completing the game to see how smooth your UI is. Please summarize findings during user study including interviews. The questions of the interview could be - how intuitive was it and where did you get stuck? - Any comment for improving the UI?
+While you implement your code, you will become an expert of your UI. To validate the usability of your UI, please conduct a user study with your friends and families. You can first let them use your UI without any instructions to see how intuitive your UI is, and then provide more information such as how to use your UI and the aim of the UI. 
+
+A general user study would be as follows:
+1. Arrange schedule with your pariticipants and don't forget to tell estimated duration for the study (15min?)
+2. Don't forget to prepare some snacks for your participants!
+3. Introduce the overall idea of the game and the goal (you can explain initial state and goal state of the game). You can also ask basic background of the user (e.g., age, proficiency with computer UI in general, how long you use computer etc...)
+4. Let the participant play the game WITHOUT telling the detail instrucation of your UI. You can also measure/track quantitative metrics such as duration to complete, number of clicks, gaze of the user (advanced) etc...  
+5. Ask questions you prepared (Which part did you get stuck? Was feedback sufficient? Did you understand the overall rule? etc...). 
+6. Get more general comments from the pariticipant such as how did you find the user study? How can I improve it? etc...
 
 
+
+<!-- Please measure the duration for completing the game to see how smooth your UI is. Please summarize findings during user study including interviews. The questions of the interview could be - how intuitive was it and where did you get stuck? - Any comment for improving the UI? -->
+
+
+# Dues for the assignments and how to submit it
+## Dues
+7/13: Show and tell of your UI
+7/20: Due for the submission of reports
+
+## How to submit?
+As for the report, please put two reports (1. Implementation and 2. User study) together in a PDF format and name it as ```<your student ID>_<your name>.pdf```
+and for your UI impelemntation and video, compress files in ```<your student ID>_<your name>.zip```
+
+
+# Questions
+Please use github issue so that other students can share your questions. 
 
 # Folder structure and relevant files to this assignment
 The overview of the folder strucutre is as following. 
