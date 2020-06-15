@@ -43,7 +43,7 @@ Focusing on basic manipulations (move, rotate, and mirror), you can develop your
 Once you finish your implementation, please make screen captha of you using your UI by Bandicam, Camstudio, and Screen2Gif etc. I personally recommend to make GIF file as you can place it easily.The video would be 30sec to max 1min. Also, please summarize your UI in the report as well by describing your UI design concept and how to use it. This part of the report can be written in README.md as well for the ease of sharing.
 
 ## Minimum requirement
-    select branches by mouse click.
+    select branches by mouse click by using the checkCloseBranch function https://github.com/hironoriyh/ui_lecture_assignment/blob/7632384aa50d987c4c7e8d198daf54ee4a6f4ce2/js/Events.js#L60
 
 ## Bonus points
     複数ユーザーのゲームの結果をうまく統合する
@@ -73,8 +73,8 @@ A general user study would be as follows:
 
 # Dues for the assignments and how to submit it
 ## Dues
-7/13: Show and tell of your UI
-7/20: Due for the submission of reports
+  7/13: Show and tell of your UI
+  7/20: Due for the submission of reports
 
 ## How to submit?
 As for the report, please put two reports (1. Implementation and 2. User study) together in a PDF format and name it as ```<your student ID>_<your name>.pdf```
