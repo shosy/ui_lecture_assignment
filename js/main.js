@@ -1,9 +1,9 @@
 'use strict';
 // global variables
-var brc = [];
-var boundary;
-var score;
-var active_brc_index;
+let brc = [];
+let boundary;
+let score;
+let active_brc_index;
 
 // preload branches BEFORE setup()
 function preload() {

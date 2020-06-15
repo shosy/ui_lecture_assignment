@@ -4,13 +4,18 @@ Welcome to the asignment page of user interface course at the University of Toky
 https://www-ui.is.s.u-tokyo.ac.jp/~takeo/course/2020/ui/index.html
 
 # The Game
-Check the game with key inputs
+### Check the game with key inputs
 https://hironoriyh.github.io/
 
-![](branchconnect_small.gif)
+![](branchconnect_small.gif) ![](complete_and_invalids.png)
 
 The game interface is composed of boundary, target points, and branches.
 Branches can be connected within a certain angle range and importantly one branch must be mirrored. The mirror rule came from the fabrication constraint of 3-axis CNC router. 
+
+### Reference (p5.js)
+editor: https://editor.p5js.org/ 
+
+code references: https://p5js.org/reference/
 
 ## Game Instruction
 ### Goal: Connect 4 corners by moving branches 
@@ -30,8 +35,7 @@ https://p5js.org/reference/#/p5/keyPressed
 
 Focusing on basic manipulations (move, rotate, and mirror), you can develop your own interaction. You can set your own goal of UI development, such as intuitive, smooth, or fun. As an intuitive UI example, [you can take mouse inputs.](https://github.com/hironoriyh/ui_lecture_assignment/blob/9f2d841e5770d647dd21f749755b51c29332cd30/js/Events.js#L38) By clicking, a user can select a branch and move/rotate by dragging. Mouse input is just an example. Please feel free to implement your own UI ideas that are highly appreciated!
 
-Once you finish your implementation, please make screen captha of you using your UI by Bandicam, Camstudio, and Screen2Gif etc. I personally recommend to make GIF file as you can place it easily.The video would be 30sec to max 1min. Also, please summarize your UI in the report as well by describing your UI design concept and how to use it. This part of the report can be written in README.md as well. 
- 
+Once you finish your implementation, please make screen captha of you using your UI by Bandicam, Camstudio, and Screen2Gif etc. I personally recommend to make GIF file as you can place it easily.The video would be 30sec to max 1min. Also, please summarize your UI in the report as well by describing your UI design concept and how to use it. This part of the report can be written in README.md as well for the ease of sharing.
 
 # Assignment 2. User study: Test your UI with participants
 While you implement your code, you will become an expert of your UI. To validate the usability of your UI, please conduct a user study with your friends and families. You can first let them use your UI without any instructions to see how intuitive your UI is, and then provide more information such as how to use your UI and the aim of the UI. 
