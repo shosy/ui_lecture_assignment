@@ -31,6 +31,8 @@ function keyPressed() {
 }
 
 
+var mouse_flag = false; // mousePressedによりbranchが選択されている状態
+
 // selection of branches
 function mousePressed(event) {
     /* first get clicked position by 
@@ -41,6 +43,13 @@ function mousePressed(event) {
     and then select
     var branch = checkCloseBranch(20)[0];
     */
+    var branch = checkCloseBranch(20);
+    if (branch[0]) {
+        for (var i = 0; i < brc.length; i++)  brc[i].setSleep(); // deactivate all branches
+        active_brc_index = branch[1]; // choose the closest branch
+        brc[active_brc_index].setMoveActive(); // select the branch by activating it
+        mouse_flag = true;
+    }
 }
 
 // move and rotate 
@@ -48,6 +57,24 @@ function mouseDragged(event) {
     /*
     see keyPressed
     */
+    if (!mouse_flag)  return;
+
+    var position = brc[active_brc_index].pos.copy();
+    var angle = brc[active_brc_index].rot;
+    var mouseVec = new createVector(mouseX, mouseY);
+    var moveVec = new createVector(event.movementX, event.movementY);
+
+    if (!keyIsDown(CONTROL)) {
+        position.add(moveVec); // change position
+    } else {
+        var v0 = mouseVec.copy().sub(moveVec).sub(position).normalize();
+        var v1 = mouseVec.copy().sub(position).normalize();
+        angle += Math.asin(Math.min(Math.max(-1, v0.x * v1.y - v0.y * v1.x), 1)); // change angle if Ctrl is pressed
+    }
+    
+    brc[active_brc_index].setPosition(position.x, position.y);
+    brc[active_brc_index].setAngle(angle); // in radians
+    score.updateScore();
 }
 
 // deactivate the selected branch
@@ -55,6 +82,7 @@ function mouseReleased() {
     /*
     you might need to deselect the selected branch 
     */
+    mouse_flag = false;
 }
 
 function checkCloseBranch(minDist) {
