@@ -24,6 +24,9 @@ function keyPressed() {
     else if (keyCode === DOWN_ARROW) {
         position.add(0, 10); // go down
     }
+    else if (keyCode === 77) {
+        brc[active_brc_index].setMirror(); // mirror the branch if M is pressed
+    }
 
     brc[active_brc_index].setPosition(position.x, position.y);
     brc[active_brc_index].setAngle(angle); // in radians
@@ -83,6 +86,19 @@ function mouseReleased() {
     you might need to deselect the selected branch 
     */
     mouse_flag = false;
+}
+
+// mirror the branch
+function doubleClicked(e) {
+    window.blockMenuHeaderScroll = true;
+    var test = checkCloseBranch(20);
+    if (test[0]) {
+        // console.log( test[0] + " ," + test[1]) ;
+        active_brc_index = test[1];
+        brc[active_brc_index].setMirror();
+        brc[active_brc_index].transform();
+        score.updateScore();
+    }
 }
 
 function checkCloseBranch(minDist) {
