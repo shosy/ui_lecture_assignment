@@ -70,9 +70,12 @@ function mouseDragged(event) {
     if (!keyIsDown(CONTROL)) {
         position.add(moveVec); // change position
     } else {
-        var v0 = mouseVec.copy().sub(moveVec).sub(position).normalize();
-        var v1 = mouseVec.copy().sub(position).normalize();
-        angle += Math.asin(Math.min(Math.max(-1, v0.x * v1.y - v0.y * v1.x), 1)); // change angle if Ctrl is pressed
+        // var v0 = mouseVec.copy().sub(moveVec).sub(position).normalize();
+        // var v1 = mouseVec.copy().sub(position).normalize();
+        // angle += Math.asin(Math.min(Math.max(-1, v0.x * v1.y - v0.y * v1.x), 1)); // change angle if Ctrl is pressed
+        var v0 = mouseVec.copy().sub(moveVec).sub(position);
+        var v1 = mouseVec.copy().sub(position);
+        angle += v0.angleBetween(v1); // change angle if Ctrl is pressed
     }
     
     brc[active_brc_index].setPosition(position.x, position.y);
