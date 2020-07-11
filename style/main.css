@@ -3,16 +3,16 @@ html, body {
     margin: 20px;
     padding: 0;
     background: #f096ac;
-    color: #776e65;
+    color: #000000;
     font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-    font-size: 18px;
-    overflow: hidden;
-    max-width: 550px;
+    font-size: 15px;
+    /* overflow: hidden; */
+    max-width: 6000px;
     left: 50%;
 }
 
 body {
-    margin: 80px 0;
+    /* margin: 80px 0; */
     justify-content: center;
     align-items: center;
 }
@@ -35,7 +35,7 @@ body {
 }
 
 .container {
-    width: 550px;
+    width: 600px;
     left: 50%;
 }
 
@@ -55,6 +55,16 @@ h1{
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 5px;
+    /*line-height: 1.65;*/
+}
+
+h2{
+    text-align: left;
+    color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    /* margin-top: 0; */
+    /* margin-bottom: 0px; */
     /*line-height: 1.65;*/
 }
 

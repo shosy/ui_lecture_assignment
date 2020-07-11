@@ -24,8 +24,8 @@ function keyPressed() {
     else if (keyCode === DOWN_ARROW) {
         position.add(0, 10); // go down
     }
-    else if (keyCode === 77) {
-        brc[active_brc_index].setMirror(); // mirror the branch if M is pressed
+    else if (keyIsDown(SHIFT)) {
+        brc[active_brc_index].setMirror(); // mirror the branch if SHIFT is pressed
     }
 
     brc[active_brc_index].setPosition(position.x, position.y);
