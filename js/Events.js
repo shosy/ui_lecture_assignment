@@ -121,3 +121,20 @@ function checkCloseBranch(minDist) {
     }
     return [closeBranch, closeIndex];
 }
+
+// show the best score
+function OnButtonClick(event) {
+    try {
+        var bestbrc = JSON.parse(localStorage.getItem("best_brc"));
+        brc.forEach(function(branch, index) {
+            var bestbranch = bestbrc[index];
+            brc[index].setPosition(bestbranch.pos.x, bestbranch.pos.y);
+            brc[index].setAngle(bestbranch.rot); // in radians
+            brc[index].mirror = bestbranch.mirror;
+            brc[index].transform();
+            score.updateScore();
+        });
+    } catch(e) {
+        OnButtonClick(event);
+    }
+}

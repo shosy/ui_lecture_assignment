@@ -64,6 +64,7 @@ class Score {
       this.best_score = this.total_score;
       this.bestContainer.textContent = this.best_score;
       localStorage.setItem("best_score", this.best_score);
+      localStorage.setItem("best_brc", JSON.stringify(brc));
       animateObject(this.bestContainer, "score-addition", this.best_score)
     }
 
