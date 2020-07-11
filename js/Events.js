@@ -122,8 +122,13 @@ function checkCloseBranch(minDist) {
     return [closeBranch, closeIndex];
 }
 
+// save canvas
+function OnButtonClick_save(event) {
+    saveCanvas('canvas.png', 'png');
+}
+
 // show the best score
-function OnButtonClick(event) {
+function OnButtonClick_bestscore(event) {
     try {
         var bestbrc = JSON.parse(localStorage.getItem("best_brc"));
         brc.forEach(function(branch, index) {
@@ -135,6 +140,6 @@ function OnButtonClick(event) {
             score.updateScore();
         });
     } catch(e) {
-        OnButtonClick(event);
+        OnButtonClick_bestscore(event);
     }
 }
