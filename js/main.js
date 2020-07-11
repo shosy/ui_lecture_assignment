@@ -11,6 +11,8 @@ function preload() {
 }
 
 function setup() {
+  localStorage.setItem('best_score', -100000);
+  localStorage.setItem('best_brc', []);
   var canvas = createCanvas(500, 450);
   boundary = new Boundary(); // initialize the boundary including target points on the corners
   score = new Score(); // initialize the scoring system including joint evaluation 

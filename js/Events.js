@@ -137,9 +137,9 @@ function OnButtonClick_bestscore(event) {
             brc[index].setAngle(bestbranch.rot); // in radians
             brc[index].mirror = bestbranch.mirror;
             brc[index].transform();
-            score.updateScore();
         });
     } catch(e) {
         OnButtonClick_bestscore(event);
     }
+    score.updateScore();
 }
