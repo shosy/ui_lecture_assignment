@@ -12,10 +12,10 @@ function keyPressed() {
     var angle = brc[active_brc_index].rot;
 
     if (keyCode === LEFT_ARROW) {
-        if (keyIsDown(CONTROL)) angle -= 0.1 * PI; // change angle if Ctrl is pressed
+        if (keyIsDown(SHIFT)) angle -= 0.1 * PI; // change angle if Shift is pressed
         else position.add(-10, 0); // change position
     } else if (keyCode === RIGHT_ARROW) {
-        if (keyIsDown(CONTROL)) angle += 0.1 * PI; // change angle if Ctrl is pressed
+        if (keyIsDown(SHIFT)) angle += 0.1 * PI; // change angle if Shift is pressed
         else position.add(10, 0); // change position
     }
     else if (keyCode === UP_ARROW) {
@@ -24,8 +24,8 @@ function keyPressed() {
     else if (keyCode === DOWN_ARROW) {
         position.add(0, 10); // go down
     }
-    else if (keyIsDown(SHIFT)) {
-        brc[active_brc_index].setMirror(); // mirror the branch if SHIFT is pressed
+    else if (keyIsDown(ALT)) {
+        brc[active_brc_index].setMirror(); // mirror the branch if Alt is pressed
     }
 
     brc[active_brc_index].setPosition(position.x, position.y);
@@ -67,12 +67,12 @@ function mouseDragged(event) {
     var mouseVec = new createVector(mouseX, mouseY);
     var moveVec = new createVector(event.movementX, event.movementY);
 
-    if (!keyIsDown(CONTROL)) {
+    if (!keyIsDown(SHIFT)) {
         position.add(moveVec); // change position
     } else {
         // var v0 = mouseVec.copy().sub(moveVec).sub(position).normalize();
         // var v1 = mouseVec.copy().sub(position).normalize();
-        // angle += Math.asin(Math.min(Math.max(-1, v0.x * v1.y - v0.y * v1.x), 1)); // change angle if Ctrl is pressed
+        // angle += Math.asin(Math.min(Math.max(-1, v0.x * v1.y - v0.y * v1.x), 1)); // change angle if Shift is pressed
         var v0 = mouseVec.copy().sub(moveVec).sub(position);
         var v1 = mouseVec.copy().sub(position);
         angle += v0.angleBetween(v1); // change angle if Ctrl is pressed
